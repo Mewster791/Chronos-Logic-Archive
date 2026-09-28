@@ -1,0 +1,68 @@
+{
+  "name": "Suggestion",
+  "type": "object",
+  "properties": {
+    "creature_id": {
+      "type": "string",
+      "title": "Creature ID"
+    },
+    "creature_name": {
+      "type": "string",
+      "title": "Creature Name"
+    },
+    "field": {
+      "type": "string",
+      "title": "Field to Amend"
+    },
+    "current_value": {
+      "type": "string",
+      "title": "Current Value"
+    },
+    "suggested_value": {
+      "type": "string",
+      "title": "Suggested Value"
+    },
+    "submitter_name": {
+      "type": "string",
+      "title": "Submitter Name"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "votes": {
+      "type": "number",
+      "title": "Consensus Votes",
+      "default": 0
+    }
+  },
+  "required": [
+    "creature_id",
+    "field",
+    "suggested_value"
+  ],
+  "rls": {
+    "create": null,
+    "read": null,
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
