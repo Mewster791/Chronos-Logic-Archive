@@ -1,0 +1,111 @@
+{
+  "name": "Creature",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Common Name"
+    },
+    "scientific_name": {
+      "type": "string",
+      "title": "Scientific Name"
+    },
+    "period": {
+      "type": "string",
+      "title": "Geological Period",
+      "enum": [
+        "Cambrian",
+        "Ordovician",
+        "Silurian",
+        "Devonian",
+        "Carboniferous",
+        "Permian",
+        "Triassic",
+        "Jurassic",
+        "Cretaceous",
+        "Paleogene",
+        "Neogene",
+        "Quaternary"
+      ]
+    },
+    "era": {
+      "type": "string",
+      "title": "Era"
+    },
+    "clade": {
+      "type": "string",
+      "title": "Clade"
+    },
+    "diet": {
+      "type": "string",
+      "title": "Diet",
+      "enum": [
+        "Carnivore",
+        "Herbivore",
+        "Omnivore",
+        "Piscivore",
+        "Filter Feeder"
+      ]
+    },
+    "length_m": {
+      "type": "number",
+      "title": "Length (m)"
+    },
+    "height_m": {
+      "type": "number",
+      "title": "Height (m)"
+    },
+    "weight_kg": {
+      "type": "number",
+      "title": "Weight (kg)"
+    },
+    "habitat": {
+      "type": "string",
+      "title": "Habitat"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description",
+      "format": "long"
+    },
+    "discovery_location": {
+      "type": "string",
+      "title": "Discovery Location"
+    },
+    "discovery_year": {
+      "type": "number",
+      "title": "Discovery Year"
+    },
+    "image_url": {
+      "type": "string",
+      "title": "Image URL",
+      "format": "image"
+    },
+    "tagline": {
+      "type": "string",
+      "title": "Tagline"
+    }
+  },
+  "required": [
+    "name",
+    "period"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": null,
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
