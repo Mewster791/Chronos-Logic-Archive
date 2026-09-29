@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 24% 96%;
+    --foreground: 210 7% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 7% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 7% 11%;
+    --primary: 210 7% 11%;
+    --primary-foreground: 36 24% 96%;
+    --secondary: 38 16% 90%;
+    --secondary-foreground: 210 7% 11%;
+    --muted: 38 16% 90%;
+    --muted-foreground: 210 5% 40%;
+    --accent: 29 100% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 12% 84%;
+    --input: 38 12% 84%;
+    --ring: 29 100% 38%;
+    --chart-1: 29 100% 38%;
+    --chart-2: 210 20% 35%;
+    --chart-3: 38 30% 55%;
+    --chart-4: 200 25% 45%;
+    --chart-5: 20 60% 50%;
+    --radius: 0.25rem;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sidebar-background: 36 24% 96%;
+    --sidebar-foreground: 210 7% 11%;
+    --sidebar-primary: 210 7% 11%;
+    --sidebar-primary-foreground: 36 24% 96%;
+    --sidebar-accent: 38 16% 90%;
+    --sidebar-accent-foreground: 210 7% 11%;
+    --sidebar-border: 38 12% 84%;
+    --sidebar-ring: 29 100% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-heading;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-mono-tag {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.15em];
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .latitudinal-rule {
+    background-image: linear-gradient(to right, transparent, hsl(var(--border)), transparent);
+  }
+}
